@@ -1,0 +1,20 @@
+﻿  Main.cpp
+C:\Users\noah.simonsson\Desktop\Programmering\Schack\constants.h(8,2): warning C4091: 'static ': ignored on left of 'consts' when no variable is declared
+Main.obj : error LNK2019: unresolved external symbol _SDL_MapRGB referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_FillRect referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_CreateWindow referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_GetWindowSurface referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_UpdateWindowSurface referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_DestroyWindow referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_PollEvent referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_CreateRenderer referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_SetRenderDrawColor referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_RenderClear referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_RenderPresent referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_Init referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+Main.obj : error LNK2019: unresolved external symbol _SDL_Quit referenced in function "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Program Files (x86)\cppLib\SDL2-2.0.16\lib\x64\SDL2.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\cppLib\SDL2-2.0.16\lib\x64\SDL2main.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\cppLib\SDL2_image-2.0.5\lib\x64\SDL2_image.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\noah.simonsson\Desktop\Programmering\Schack\Debug\Schack.exe : fatal error LNK1120: 14 unresolved externals
