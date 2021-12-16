@@ -13,12 +13,10 @@
 
 #pragma region GraphicalBoard
 void Board::RenderGraphicalBoard(SDL_Renderer* renderer) {
-	if (IsMate && !IsStale)
+	if (IsMate && finished)
 		RenderText("Checkmate", renderer, (consts::WIDTH / 2 - 100) + (consts::WIDTH / 3), consts::HEIGHT / 2 - 50);
-	if(IsStale && !IsMate)
+	if(IsStale && finished)
 		RenderText("Stalemate", renderer, (consts::WIDTH / 2 - 100) + (consts::WIDTH / 3), consts::HEIGHT / 2 - 50);
-	if(IsCheck && !IsMate)
-		RenderText("Check", renderer, (consts::WIDTH / 2 - 100) + (consts::WIDTH / 3), consts::HEIGHT / 2 - 50);
 	for (int y = 0; y < consts::BOARD_SIZE; y++)
 	{
 		for (int x = 0; x < consts::BOARD_SIZE; x++)
@@ -130,7 +128,6 @@ Move Board::FindRandomMove() {
 	srand(time(NULL));
 	std::vector<Move> moves = GenerateMoves();
 	int index = rand() % moves.size();
-	//std::cout << index << "\n";
 	return moves[index];
 }
 
@@ -419,10 +416,10 @@ void Board::FindMate() {
 		}
 	}
 	bool noMoves = (numOfBlackMoves <= 0 || numOfWhiteMoves <= 0);
-	if (!IsMate && noMoves) IsStale = true;
 	if (!IsMate && !noMoves && isCheck) IsCheck = true; else IsCheck = false;
-	if (IsMate || IsStale) finished = true;
 	IsMate = noMoves && isCheck;
+	if (!IsMate && noMoves) IsStale = true;
+	if (IsMate || IsStale) finished = true;
 }
 Square Board::FindSquareAtPosition(int& x, int& y) {
 	int size = sizeof(squares) / sizeof(squares[0]);
@@ -563,7 +560,7 @@ int Board::EvaluateBoard() {
 
 void Board::RenderText(std::string text, SDL_Renderer* renderer, int x, int y) {
 	TTF_Init();
-	TTF_Font* font = TTF_OpenFont("Fonts/title.ttf", 128);
+	TTF_Font* font = TTF_OpenFont("Fonts/title.ttf", 16);
 	SDL_Color color = { 255, 255, 255 };
 	SDL_Surface* surfaceMessage = TTF_RenderText_Solid(font, text.c_str(), color);
 	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surfaceMessage);

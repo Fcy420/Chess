@@ -1,3 +1,2 @@
 ﻿  Board.cpp
-C:\Users\noah.simonsson\Desktop\Programmering\Schack\Board.cpp(130,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Schack.vcxproj -> C:\Users\noah.simonsson\Desktop\Programmering\Schack\x64\Debug\Schack.exe
+  Schack.vcxproj -> C:\Users\noah.simonsson\Desktop\Programmering\Chess\x64\Debug\Schack.exe

@@ -43,7 +43,7 @@ int main(int argc, char* args[]) {
 						}
 					}
 				}
-				if (SDL_PollEvent(&e) != 0) {
+				if (SDL_WaitEvent(&e) != 0) {
 					if (e.type == SDL_QUIT) {
 						break;
 					}
@@ -72,7 +72,6 @@ int main(int argc, char* args[]) {
 						}
 					}
 				}
-				SDL_PumpEvents();
 
 				board.RenderGraphicalBoard(renderer);
 				SDL_SetRenderDrawColor(renderer, 50, 50, 50, 255);
